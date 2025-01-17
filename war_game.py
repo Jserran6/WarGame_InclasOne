@@ -140,7 +140,7 @@ class War_Game:
         # Assumes hands are empty
         self.deck.shuffle()
         counter = 0
-        while(self.players[0].get_hand_size() < 20):
+        while(self.players[0].get_hand_size() < 26):
             for player in self.players:
                 player.add_card_hand(self.deck.deal())
                 counter += 1
@@ -165,7 +165,7 @@ class War_Game:
     def game_won(self):
         result = -1
         for i in range(len(self.players)):
-            if self.players[i].get_total_cards() >= 39:
+            if self.players[i].get_total_cards() >= 30:
                 result = i
                 return result
         return result
