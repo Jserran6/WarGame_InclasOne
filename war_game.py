@@ -139,7 +139,7 @@ class War_Game:
     def deal_cards(self):
         # Assumes hands are empty
         self.deck.shuffle()
-        counter = 0
+        counter = 20
         while(self.players[0].get_hand_size() < 15):
             for player in self.players:
                 player.add_card_hand(self.deck.deal())
